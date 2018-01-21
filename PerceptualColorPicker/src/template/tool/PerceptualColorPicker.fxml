@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root styleClass="fond" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle id="curseur" fx:id="curseurO" centerX="810.0" centerY="109.0" layoutX="-143.0" layoutY="15.0" onMouseDragged="#curseurOMouseDragged" radius="5.0" />
+      <HBox alignment="CENTER" layoutX="161.0" layoutY="17.0" prefHeight="31.0" prefWidth="430.0" spacing="25.0">
+         <children>
+            <Label fx:id="ma_b" onMouseClicked="#menuPlansClicked" styleClass="menu" text="a/b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ma_L" onMouseClicked="#menuPlansClicked" styleClass="menu" text="a/L">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mb_L" onMouseClicked="#menuPlansClicked" styleClass="menu" text="b/L">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mc_H" onMouseClicked="#menuPlansClicked" styleClass="menu" text="c/H">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mc_L" onMouseClicked="#menuPlansClicked" styleClass="menu" text="c/L">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mH_L" onMouseClicked="#menuPlansClicked" styleClass="menu" text="H/L">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="23.0" layoutY="49.0" text="divisions">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Line endY="150.0" layoutX="87.0" layoutY="92.0" startY="-50.0" />
+      <Line endX="70.0" layoutX="667.0" layoutY="123.0" startX="-70.0" />
+      <Circle fx:id="gradient" fill="#1f93ff00" layoutX="667.0" layoutY="224.0" radius="30.0" strokeType="INSIDE" strokeWidth="15.0">
+         <stroke>
+            <LinearGradient startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Circle>
+      <Line endY="60.0" layoutX="625.0" layoutY="417.0" startY="-80.0" />
+      <VBox alignment="CENTER_LEFT" layoutX="621.0" layoutY="366.0" prefHeight="104.0" prefWidth="83.0">
+         <children>
+            <Label fx:id="mLab" onMouseClicked="#menuColorCodeClicked" styleClass="menu" text="CIE Lab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mLch" onMouseClicked="#menuColorCodeClicked" styleClass="menu" text="CIE LcH">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mWeb" onMouseClicked="#menuColorCodeClicked" styleClass="menu" text="WEB">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mRgb" onMouseClicked="#menuColorCodeClicked" styleClass="menu" text="sRGB">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="labelOrtho" layoutX="742.0" layoutY="110.0" styleClass="menu" text="L" />
+      <Label fx:id="mPlusDivision" layoutX="117.0" layoutY="48.0" onMouseClicked="#menuDivisionClicked" styleClass="menu" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="mMoinsDivision" layoutX="120.0" layoutY="70.0" onMouseClicked="#menuDivisionClicked" styleClass="menu" text="-">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDivision" layoutX="106.0" layoutY="65.0" text="5">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Circle id="curseur" fx:id="curseurC" centerX="810.0" centerY="109.0" layoutX="-143.0" layoutY="115.0" onMouseDragged="#curseurCMouseDragged" radius="5.0" />
+      <Line endX="70.0" layoutX="667.0" layoutY="223.0" startX="-70.0" />
+      <Label layoutX="33.0" layoutY="67.0" text="sides">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <StackPane layoutX="161.0" layoutY="48.0">
+         <children>
+            <Canvas fx:id="canvas" height="430.0" width="430.0" />
+            <Pane fx:id="paneCanvas" prefHeight="430.0" prefWidth="430.0" />
+         </children>
+      </StackPane>
+      <VBox fx:id="vboxSnapshot" alignment="CENTER" layoutX="161.0" layoutY="489.0" spacing="5.0">
+         <children>
+            <HBox fx:id="hboxPalette" prefHeight="80.0" prefWidth="430.0" spacing="5.0" />
+            <HBox fx:id="hboxCodes" alignment="CENTER" prefHeight="50.0" prefWidth="430.0" spacing="5.0" />
+            <Label fx:id="labelSnapshot" text="-">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="mSnapshot" layoutX="98.0" layoutY="379.0" onMouseClicked="#menuSnapshotClicked" styleClass="menu" text="small">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Rectangle fx:id="buttonDark" arcHeight="5.0" arcWidth="5.0" fill="#444444" height="10.0" layoutX="726.0" layoutY="625.0" onMouseClicked="#styleButtonClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" />
+      <Rectangle fx:id="buttonLight" arcHeight="5.0" arcWidth="5.0" fill="#bbbbbb" height="10.0" layoutX="740.0" layoutY="625.0" onMouseClicked="#styleButtonClicked" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" />
+      <Label fx:id="mOrtho" layoutX="639.0" layoutY="61.0" onMouseClicked="#menuModesClicked" styleClass="menu" text="ortho">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mContraste" layoutX="626.0" layoutY="159.0" onMouseClicked="#menuModesClicked" styleClass="menu" text="contraste">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mCenter" layoutX="646.0" layoutY="277.0" onMouseClicked="#menuCenterClicked" text="center">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="632.0" layoutY="337.0" text="color code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mSegment" layoutX="86.0" layoutY="110.0" onMouseClicked="#menuOutilsClicked" styleClass="menu" text="segment">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mQuadratic" layoutX="85.0" layoutY="159.0" onMouseClicked="#menuOutilsClicked" styleClass="menu" text="quadratic">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mPolygon" layoutX="89.0" layoutY="209.0" onMouseClicked="#menuOutilsClicked" styleClass="menu" text="polygon">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mRectangle" layoutX="93.0" layoutY="272.0" onMouseClicked="#menuOutilsClicked" styleClass="menu" text="related">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mPalette" layoutX="94.0" layoutY="332.0" onMouseClicked="#menuOutilsClicked" styleClass="menu" text="palette">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mCopy" layoutX="101.0" layoutY="616.0" onMouseClicked="#menuCopyClicked" styleClass="menu" text="copy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mSNAPSHOT" layoutX="102.0" layoutY="422.0" onMouseClicked="#menuSnapshotClicked" styleClass="menu" text="wide">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endY="50.0" layoutX="87.0" layoutY="400.0" startY="-15.0" />
+      <Label layoutX="21.0" layoutY="385.0" text="Snapshot" />
+   </children>
+</fx:root>
