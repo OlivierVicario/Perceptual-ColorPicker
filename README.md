@@ -1,6 +1,6 @@
 # Perceptual-ColorPicker
 
-![alt text](https://raw.githubusercontent.com/OlivierVicario/Perceptual-ColorPicker/master/src/perceptualcolorpicker/help/ensemble.png)
+![alt text](https://github.com/OlivierVicario/Perceptual-ColorPicker/blob/master/2018.01.14.08.54.04.png)
 
 
 What the project does
