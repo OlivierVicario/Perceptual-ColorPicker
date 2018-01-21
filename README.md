@@ -11,7 +11,7 @@ Why the project is useful
 
 The project is useful because standard colorpicker use colorspaces that are not adapted to the human vision of colors. They should not be used in graphic software to choose color scheme :
 
-alt text
+![alt text](https://github.com/OlivierVicario/Perceptual-ColorPicker/blob/master/palettes_triangle-1-1024x490.png)
 
 How users can get started with the project
 
