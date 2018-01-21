@@ -15,11 +15,11 @@ alt text
 
 How users can get started with the project
 
-PCP is a javafx project. Just download the PerceptualColorPicker.jar to use it. Help is included.
+Perceptual Colorpicker is a tool for Processing3. Download it from https://perceptualcolor.org
 
 Where users can get help with your project :
 
-help manual is in wiki.
+help manual is at https://perceptualcolor.org
 
 Who maintains and contributes to the project
 
